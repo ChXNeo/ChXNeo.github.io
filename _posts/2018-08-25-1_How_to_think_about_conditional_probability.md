@@ -105,10 +105,3 @@ P(E|F)=\frac{P(EF)}{P(F)}
 
 [^review]:其实这里又有一个新的问题，即如何看待这样的一个定义。但是我懒得写了。
 
-<script>
-var idcomments_acct = '35ed11482a884834fed48dce45cb982c';
-var idcomments_post_id;
-var idcomments_post_url;
-</script>
-<span id="IDCommentsPostTitle" style="display:none"></span>
-<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
