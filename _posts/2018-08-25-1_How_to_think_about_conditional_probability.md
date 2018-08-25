@@ -4,54 +4,54 @@ title: 理解条件概率：极限角度
 date: 2018-08-25 16:54:06 
 tag: 概率与统计
 ---
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 [toc]
 # 引言
 条件概率是概率论中的一个重要概念。在一般的“概率论”教材中，它出现的位置往往十分地靠前，常跟随在概率公理的后面，或出现在同一章里。它的定义可以帮助我们更轻松地计算欲求概率，进而得到我们所需要的信息。对于绝大多数的读者而言，条件概率的定义简单到可以很容易地背诵并应用在各种场景中。然而，关于“它的定义是如何产生的”这一有趣的问题，本可以有更进一步的讨论。
 
 当然，为了方便之后的讨论，我先在这里引入条件概率的定义[^def]。对于这个定义，我暂时不做任何说明。
 
-\\[
-Definition \quad 1
+$$
+Definition \quad 1 \\
+If  \quad P(F)>0, then \quad P(E|F)=\frac{P(EF)}{P(F)}
+$$
 
-If \quad P(F)>0,\quad then  
-
-P(E|F)=\frac{P(EF)}{P(F)}
-\\]
-在进行下一步讨论之前，我先来讲一讲韦恩图[^Venn.def]在证明概率论中的定理的例子。
+在进行下一步讨论之前，我先来讲一讲韦恩图[^Venndef]在证明概率论中的定理的例子。
 ## 韦恩图证明容斥原理的特例
+$$
+Proposition \quad 1 \\ 
+P(E\cup F) =P(E)+P(F)-P(E \cap F)
+$$
 
-\\[
-Proposition \quad 1
-
-P(E\cup F)=P(E)+P(F)-P(E \cap F)
-\\]
 ![](/images/posts/1/Venn.png)
 
 由图可知：
 
-\\[
-E \cup F = I \cup II \cup III
-
-E = I \cup II
-
-F = II \cup III
-
+$$
+E \cup F = I \cup II \cup III \\
+E= I \cup II \\
+F = II \cup III \\
 EF = II
-\\]
+$$
+
 由于这三个事件互不相交,由第三概率公理有：
-\\[
-P(E \cup F )= P(I) + P(II) + P(III)
-
-P(E) = P(I) + P(II)
-
-P(F) = P(II) +P( III)
-
+$$
+P(E \cup F )= P(I) + P(II) + P(III) \\
+P(E) = P(I) + P(II) \\
+P(F) = P(II) +P( III) \\
 P(EF) = P(II)
-\\]
+$$
+
 所以，
-\\[
+$$
 P(E\cup F)=P(E)+P(F)-P(E \cap F)
-\\]
+$$
+
 这里，韦恩图与概率之间的加减法联系在了一起。这是韦恩图的定义与第三概率公理共同作用的结果：**韦恩图负责展示哪个事件是由哪些互不相关的小事件合并而成，第三概率公理负责将这个关系翻译成含有加减算符的等式。**
 ## “概率除法”
 **对于条件概率的定义，很多人在用“概率除法”的角度去理解[^div]，甚至试图通过韦恩图来为这个想法背书。但这样做实际上是不行的——至少是不显然的。**
@@ -97,6 +97,6 @@ P(E|F)=\frac{P(EF)}{P(F)}
 
 [^div]:[如何理解条件概率？ - 知乎](https://www.zhihu.com/question/27462939)
 
-[^Venn.def]:实际上更多地是叫文氏图，参看[百度百科-文氏图](https://baike.baidu.com/item/%E6%96%87%E6%B0%8F%E5%9B%BE/5017234?fr=aladdin)
+[^Venndef]:实际上更多地是叫文氏图，参看[百度百科-文氏图](https://baike.baidu.com/item/%E6%96%87%E6%B0%8F%E5%9B%BE/5017234?fr=aladdin)
 
 [^review]:其实这里又有一个新的问题，即如何看待这样的一个定义。但是我懒得写了。
