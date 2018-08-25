@@ -11,7 +11,6 @@ tag: 概率与统计
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-{:toc}
 # 引言
 条件概率是概率论中的一个重要概念。在一般的“概率论”教材中，它出现的位置往往十分地靠前，常跟随在概率公理的后面，或出现在同一章里。它的定义可以帮助我们更轻松地计算欲求概率，进而得到我们所需要的信息。对于绝大多数的读者而言，条件概率的定义简单到可以很容易地背诵并应用在各种场景中。然而，关于“它的定义是如何产生的”这一有趣的问题，本可以有更进一步的讨论。
 
@@ -105,3 +104,11 @@ P(E|F)=\frac{P(EF)}{P(F)}
 [^Venndef]:实际上更多地是叫文氏图，参看[百度百科-文氏图](https://baike.baidu.com/item/%E6%96%87%E6%B0%8F%E5%9B%BE/5017234?fr=aladdin)
 
 [^review]:其实这里又有一个新的问题，即如何看待这样的一个定义。但是我懒得写了。
+
+<script>
+var idcomments_acct = '35ed11482a884834fed48dce45cb982c';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
