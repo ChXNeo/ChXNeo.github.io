@@ -10,26 +10,26 @@ tag: 概率与统计
 
 当然，为了方便之后的讨论，我先在这里引入条件概率的定义[^def]。对于这个定义，我暂时不做任何说明。
 
-$$
+\\[
 Definition \quad 1
 
 If \quad P(F)>0,\quad then  
 
 P(E|F)=\frac{P(EF)}{P(F)}
-$$
+\\]
 在进行下一步讨论之前，我先来讲一讲韦恩图[^Venn.def]在证明概率论中的定理的例子。
 ## 韦恩图证明容斥原理的特例
 
-$$
+\\[
 Proposition \quad 1
 
 P(E\cup F)=P(E)+P(F)-P(E \cap F)
-$$
+\\]
 ![](/images/posts/1/Venn.png)
 
 由图可知：
 
-$$
+\\[
 E \cup F = I \cup II \cup III
 
 E = I \cup II
@@ -37,9 +37,9 @@ E = I \cup II
 F = II \cup III
 
 EF = II
-$$
+\\]
 由于这三个事件互不相交,由第三概率公理有：
-$$
+\\[
 P(E \cup F )= P(I) + P(II) + P(III)
 
 P(E) = P(I) + P(II)
@@ -47,11 +47,11 @@ P(E) = P(I) + P(II)
 P(F) = P(II) +P( III)
 
 P(EF) = P(II)
-$$
+\\]
 所以，
-$$
+\\[
 P(E\cup F)=P(E)+P(F)-P(E \cap F)
-$$
+\\]
 这里，韦恩图与概率之间的加减法联系在了一起。这是韦恩图的定义与第三概率公理共同作用的结果：**韦恩图负责展示哪个事件是由哪些互不相关的小事件合并而成，第三概率公理负责将这个关系翻译成含有加减算符的等式。**
 ## “概率除法”
 **对于条件概率的定义，很多人在用“概率除法”的角度去理解[^div]，甚至试图通过韦恩图来为这个想法背书。但这样做实际上是不行的——至少是不显然的。**
@@ -61,36 +61,36 @@ $$
 # 概率：频率的极限
 事实上，一个事件的概率可以用这样的定义来表示：
 
-$$
+\\[
 P(E) = \lim_{N \rightarrow \infty } \frac{N(E)}{N}
-$$
+\\]
 其中N表示实验的次数，N(E)表示事件E发生的次数。概率公理可以保证这样的极限总是收敛的。[^review]
 
-那么，我们要怎样计算$P(E|F)$呢？我们想找的其实是，在F发生的情况下，E事件发生的概率。
+那么，我们要怎样计算\\(P(E|F)\\)呢？我们想找的其实是，在F发生的情况下，E事件发生的概率。
 换句话说，就是E随F发生的频率的极限。
 
-想象我们做了N次实验，我们首先找出F发生的那些实验。`如果$N(F)>0$的话`，我们就把它们挑出来。然后我们再数挑出来后的实验中，E发生的次数，也就是N(EF)。
+想象我们做了N次实验，我们首先找出F发生的那些实验。`如果\\(N(F)>0\\)的话`，我们就把它们挑出来。然后我们再数挑出来后的实验中，E发生的次数，也就是N(EF)。
 于是，根据定义，就有了：
-$$
+\\[
 P(E|F) = \lim_{N \rightarrow \infty } \frac{N(EF)}{N(F)}
-$$
+\\]
 进一步操作：
-$$
+\\[
 \lim_{N \rightarrow \infty } \frac{N(EF)}{N(F)} = \lim_{N \rightarrow \infty } \frac{ \frac{N(EF)}{N}  }{   \frac{N(F)}{N}   }
-$$
+\\]
 由于主分式分子分母的极限存在：
-$$
+\\[
 \lim_{N \rightarrow \infty } \frac{ \frac{N(EF)}{N}  }{   \frac{N(F)}{N}   }
 =
  \frac{ \lim_{N \rightarrow \infty } \frac{N(EF)}{N}  }{ \lim_{N \rightarrow \infty }  \frac{N(F)}{N}   }
  =
  \frac{P(EF)}{P(F)}
-$$
+\\]
 即：
 
-$$
+\\[
 P(E|F)=\frac{P(EF)}{P(F)}
-$$
+\\]
 
 
 [^def]:Ross, S. M. (1998). A first course in probability. American Statistician, 56(3), 247-247.
